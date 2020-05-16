@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-video-capture"
+    version="1.0.0">
+    <name>Video Capture</name>
+    <description>This plugin establishes the functionality for capturing the video in IOS</description>
+    <author>kalaiprakash93@gmail.com</author>
+    <engines>
+        <engine name="cordova" version=">=5.0.0" />
+    </engines>
+    <keywords>video-capture</keywords>
+    <license>Apache 2.0 License</license>
+    <repo></repo>
+    <issue></issue>
+	<asset src="www/videoCapture.js" target="js/videoCapture.js"/>
+	<js-module src="www/videoCapture.js" name="videoCapture">
+        <clobbers target="videoCapture" />
+		</js-module>
+    <!-- android -->
+    <platform name="ios">
+        <preference name="CAMERA_USAGE_DESCRIPTION" default="This app needs camera access"/>
+            <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+                <string>$CAMERA_USAGE_DESCRIPTION</string>
+            </config-file>
+
+            <preference name="MICROPHONE_USAGE_DESCRIPTION" default="This app needs microphone access"/>
+            <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+                <string>$MICROPHONE_USAGE_DESCRIPTION</string>
+            </config-file>
+        <config-file target="config.xml" parent="/widget">
+            <feature name="videoCapture">
+                <param name="ios-package" value="videoCapture" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/videoCapture.h"/>
+        <source-file src="src/ios/videoCapture.m"/>
+        <framework src="Foundation.framework" />
+        <framework src="CoreFoundation.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="AssetsLibrary.framework" />
+        <framework src="AVFoundation.framework" />
+    </platform>
+</plugin>

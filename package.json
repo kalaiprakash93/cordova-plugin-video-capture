@@ -1,0 +1,32 @@
+{
+  "name": "cordova-plugin-video-capture",
+  "version": "1.0.1",
+  "description": "This plugin establishes the functionality for capture the video in iOS",
+  "cordova": {
+    "id": "cordova-plugin-video-capture",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalaiprakash93/cordova-plugin-video-capture.git"
+  },
+  "keywords": [
+    "video-capture",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=5.0.0"
+    }
+  ],
+  "author": "kalaiprakash93@gmail.com",
+  "license": "Apache 2.0 License",
+  "bugs": {
+    "url": "https://github.com/kalaiprakash93/cordova-plugin-video-capture/issues"
+  },
+  "homepage": "https://github.com/kalaiprakash93/cordova-plugin-video-capture#readme"
+}
